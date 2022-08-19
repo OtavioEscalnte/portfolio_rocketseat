@@ -1,0 +1,19 @@
+@import "details";
+@import "content";
+@import "theme";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $body-bg-color;
+  display: grid;
+  grid-template-columns: minmax(300px, 1fr);
+  grid-template-areas:
+    ".details"
+    ".main-content";
+  font-family: $text-font;
+}
