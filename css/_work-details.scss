@@ -1,3 +1,4 @@
+@import "breakpoint";
 .work-details {
   display: flex;
   max-width: 348px;
@@ -16,6 +17,34 @@
     p {
       display: none;
       color: $text-color;
+    }
+  }
+}
+@media screen and (min-width: $tablets) {
+  .work-details {
+    flex-direction: column;
+    padding: 0 20px;
+    a {
+      margin: 10px 0;
+      p {
+        display: flex;
+        margin-left: 20px;
+        font-size: 0.7rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $laptops) {
+  .work-details {
+    flex-direction: column;
+    padding: 30px 40px;
+
+    a {
+      align-items: center;
+      p {
+        font-size: 0.7rem;
+      }
     }
   }
 }

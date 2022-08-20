@@ -1,6 +1,8 @@
+@import "theme";
 @import "details";
 @import "content";
-@import "theme";
+@import "footer";
+@import "breakpoint";
 
 * {
   margin: 0;
@@ -9,11 +11,22 @@
 }
 
 body {
+  overflow-x: hidden;
   background-color: $body-bg-color;
   display: grid;
   grid-template-columns: minmax(300px, 1fr);
   grid-template-areas:
     ".details"
-    ".main-content";
+    ".main-content"
+    ".footer";
   font-family: $text-font;
+}
+
+@media screen and (min-width: $laptops) {
+  body {
+    grid-template-columns: auto 2fr;
+    grid-template-areas:
+      ".details" ".main-content"
+      ".footer" "footer";
+  }
 }

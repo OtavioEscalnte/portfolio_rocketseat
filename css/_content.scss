@@ -1,7 +1,61 @@
+@import "card";
+@import "post";
 .main-content {
   grid-area: main-content;
   grid-column: 1;
+  min-height: 100vh;
   width: 100%;
   padding: 0 10px;
-  margin: 0 auto;
+  margin: 30px auto 0;
+
+  .my-projects {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 348px;
+    width: 100%;
+    background-color: $bg-cards;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    h3 {
+      font-size: 1.2rem;
+      color: $text-color;
+    }
+    a {
+      font-size: 0.8rem;
+      color: $text-color;
+      text-decoration: none;
+    }
+  }
+  .recent-posts {
+    max-width: 348px;
+    width: 100%;
+    margin: 30px auto 0;
+    background-color: $bg-cards;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    h3 {
+      font-size: 1.2rem;
+      color: $text-color;
+      font-weight: bold;
+    }
+  }
+}
+
+@media screen and (min-width: $laptops) {
+  .main-content {
+    grid-column: 2;
+    grid-row: 1;
+    margin: 40px 0 0;
+    padding: 0 40px 0 20px;
+    .my-projects {
+      max-width: 100%;
+    }
+    .recent-posts {
+      max-width: 100%;
+    }
+  }
 }

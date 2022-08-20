@@ -1,0 +1,96 @@
+.container-cards {
+  .card {
+    width: 100%;
+    max-width: 348px;
+    margin: 30px auto 0;
+    background-color: $bg-cards;
+
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+    .name-repo {
+      display: flex;
+      .name {
+        font-size: 1rem;
+        font-weight: 700;
+        color: $text-color;
+        margin-left: 16px;
+      }
+    }
+    .description {
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: $text-color;
+      margin-top: 20px;
+    }
+
+    .container-details-card {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+      width: 100%;
+
+      .stars-branch {
+        display: flex;
+
+        .icon-container + .icon-container {
+          margin-left: 16px;
+        }
+
+        .icon-container {
+          display: flex;
+          align-items: center;
+          p {
+            font-size: 0.8rem;
+            font-weight: 400;
+            color: $text-color;
+            margin-left: 8px;
+          }
+        }
+      }
+      .language {
+        display: flex;
+        align-items: center;
+
+        .dot {
+          height: 15px;
+          width: 15px;
+          margin-right: 8px;
+          border-radius: 50%;
+          background-color: #e7de79;
+          border: 2px solid $text-color;
+        }
+
+        p {
+          color: $text-color;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $laptops) {
+  .container-cards {
+    display: flex;
+
+    .card + .card {
+      margin-left: 30px;
+    }
+    .card {
+      margin: 30px 0 0;
+      max-width: 461px;
+      padding: 30px;
+      &:hover {
+        cursor: pointer;
+      }
+      .name-repo {
+        .name {
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}

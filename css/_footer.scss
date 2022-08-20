@@ -1,0 +1,19 @@
+.footer {
+  grid-area: footer;
+  grid-column: 1;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: $text-color;
+  }
+}
+@media screen and (min-width: $laptops) {
+  .footer {
+    grid-column: span 2;
+  }
+}

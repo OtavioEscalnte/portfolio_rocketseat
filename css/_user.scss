@@ -1,32 +1,66 @@
+@import "breakpoint";
 .user {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  justify-content: center;
   background-color: $bg-cards;
   max-width: 348px;
   width: 100%;
-  height: 292px;
   margin: 40px 0 0;
+  padding: 20px 0;
   border-radius: 20px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   img {
-    width: 128px;
-    height: 128px;
-    margin-top: 32px;
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
     border-radius: 50%;
     border: 2px solid #00ff00;
   }
+  .user-details {
+    text-align: center;
 
-  h1 {
-    margin-top: 30px;
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: $text-color;
+    h1 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: $text-color;
+    }
+    p {
+      margin-top: 10px;
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: $text-color;
+    }
   }
-  p {
-    margin-top: 10px;
-    font-size: 0.8rem;
-    font-weight: 400;
-    color: $text-color;
+}
+@media screen and (min-width: $tablets) {
+  .user {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    img {
+      width: 100px;
+      height: 100px;
+      margin-right: 0;
+    }
+    .user-details {
+      margin-top: 20px;
+    }
+  }
+}
+
+@media screen and (min-width: $laptops) {
+  .user {
+    height: 292px;
+    img {
+      width: 128px;
+      height: 128px;
+    }
+    .user-details {
+      h1 {
+        font-size: 1.4rem;
+      }
+    }
   }
 }

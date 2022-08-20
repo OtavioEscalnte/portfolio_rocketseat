@@ -30,6 +30,9 @@
       height: 24px;
       border-radius: 30px;
       margin: 0 0 15px 15px;
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 }
